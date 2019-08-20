@@ -6,6 +6,9 @@ $username = $_SESSION['username'];
 $comment = $_SESSION['comment'];
 $password = $_SESSION['password'];
 $gender = $_SESSION['gender'];
+if (isset($_POST['submit'])){
+	header('Location: Account.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,14 +25,6 @@ $gender = $_SESSION['gender'];
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	.container {
-	 background-color: rgba(0,191,255, 0.4);
-	 float: left;
-	 margin-left: 40px;
-	 margin-top: 100px;
-	 width: 400px;
-	 border-radius: 25px;
-	}
 	h4{
 		margin-left: 10px;
 		text-align: left;
@@ -37,7 +32,13 @@ $gender = $_SESSION['gender'];
 	</style>
 </head>
 <body>
-<div class="container">
+<div class="container" style="
+	background-color: rgba(0,191,255, 0.4);
+	 float: left;
+	 margin-left: 40px;
+	 margin-top: 100px;
+	 width: 400px;
+	 border-radius: 25px;">
 	<h1 style="text-align: center; color: #FFFF00; margin-top: 10px;">Information</h1>
 	<h4><strong style="color: white">Name: </strong><input readonly class="form-control-plaintext" style="text-align: center; color: red;" value="<?php echo $name;?>"><h4>
 	<h4><strong style="color: white">Email: </strong><input readonly class="form-control-plaintext" style="text-align: center; color: red;" value="<?php echo $email;?>"><h4>
@@ -45,8 +46,9 @@ $gender = $_SESSION['gender'];
 	<h4><strong style="color: white">Password: </strong><input readonly class="form-control-plaintext" style="text-align: center; color: red;" value="<?php echo $password;?>"></h4>
 	<h4><strong style="color: white">Comment: </strong><input readonly class="form-control-plaintext" style="text-align: center; color: red;" value="<?php echo $comment;?>"></h4>
 	<h4><strong style="color: white">Gender: </strong><input readonly class="form-control-plaintext" style="text-align: center; color: red;" value="<?php echo $gender;?>"></h4>
-	<a href="validation.php"><h4>Click Here to Go Back</h4></a>
-	
+	<div style="border-radius: 10px; height: 40px;" class="container bg-primary text-center">
+	<a href="validation.php" class="nav-link text-light">Click Here to Go Back</a>
+	</div>
 </div>
 </body>
 </html>
