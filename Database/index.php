@@ -12,13 +12,8 @@ mysqli_free_result($result);
 #close connection
 mysqli_close($conn);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>User Account</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
+<?php include('inc/header.php');?>
+
 	<div class="jumbotron">
 		<h1 style="font-family: 'Impact';text-align: center;">USERS</h1>
 		<?php foreach ($users as $user):?>
@@ -30,5 +25,4 @@ mysqli_close($conn);
 			</div>
 		<?php endforeach;?>
 	</div>
-</body>
-</html>
+<?php include('inc/footer.php');?>

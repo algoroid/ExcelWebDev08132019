@@ -14,13 +14,8 @@ mysqli_free_result($result);
 #close connection
 mysqli_close($conn);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>User Account</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
+<?php include('inc/header.php');?>
+<?php include('inc/navbar.php');?>
 	<div class="jumbotron">
 		<h1 style="font-family: 'Impact';text-align: center;">USERS</h1>
 			<div class="container" style="background-color: #CCCCCC; text-align: center">
@@ -32,5 +27,4 @@ mysqli_close($conn);
 			<hr class="my-4">
 			</div>
 	</div>
-</body>
-</html>
+<?php include('inc/footer.php');?>
